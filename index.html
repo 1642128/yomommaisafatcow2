@@ -3,8 +3,23 @@
 <head>
 </head>
 <body>
+  <input type="text", id="input"></input>
+  <iframe id="iframe"></iframe>
   <button onclick="hi()">Inspect</button>
 </body>
 <script>
-  function hi() {     var script =  document.createElement('script');    script.src="//cdn.jsdelivr.net/npm/eruda";     document.body.appendChild(script);    script.onload = function () {         eruda.init()     } })();
+  document.getElementById("iframe").style.width = "100%";
+  document.getElementById("iframe").style.height = "100%";
+  document.getElementById("iframe").style.border = "none";
+  function hi() {     
+    var script =  document.createElement('script');
+    script.src="http://cdn.jsdelivr.net/npm/eruda";
+    document.body.appendChild(script);
+    script.onload = function () {         
+      eruda.init()     
+    } 
+  }
+  while true {
+    document.getElementById("iframe").src = document.getElementById("input").value;
+  }
 </script>
