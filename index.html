@@ -3,8 +3,6 @@
 <head>
 </head>
 <body>
-  <input type="text", id="input">
-  <iframe id="iframe">
   <button onclick="hi()">Inspect</button>
 </body>
 <script>
@@ -16,9 +14,6 @@
     script.src = "http://cdn.jsdelivr.net/npm/eruda";
     document.body.appendChild(script);
     script.onload = eruda.init()
-  }
-  while true {
-    document.getElementById("iframe").src = document.getElementById("input").value;
   }
 </script>
 </html>
