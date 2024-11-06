@@ -1,18 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script src="http://cdn.jsdelivr.net/npm/eruda"></script>
 </head>
 <body>
   <button onclick="hi()">Inspect</button>
   <script>
-  document.getElementById("iframe").style.width = "0%";
-  document.getElementById("iframe").style.height = "0%";
-  document.getElementById("iframe").style.border = "none";
   function hi() {     
-    var script = document.createElement('script');
-    script.src = "http://cdn.jsdelivr.net/npm/eruda";
-    script.onload = eruda.init()
-    document.body.appendChild(script);
+    eruda.init()
   }
 </script>
 </body>
