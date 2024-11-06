@@ -4,11 +4,11 @@
   <script src="http://cdn.jsdelivr.net/npm/eruda"></script>
 </head>
 <body>
-  <button onclick="hi()">Inspect</button>
-  <script>
-  function hi() {     
-    eruda.init()
-  }
+  <button id="hi">Inspect</button>
+<script>
+  document.getElementById("hi").addEventListener("click",  function(){
+  eruda.init();
+});
 </script>
 </body>
 </html>
